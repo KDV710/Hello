@@ -1,15 +1,15 @@
 #root {
-  background: #EEEBD0;
+  background: ##eeebd0;
   width: 350px;
   height: 170px;
   margin: auto;
   border-radius: 1%;
-  box-shadow: 5px 5px 2px #888888;
+  box-shadow: 5px 5px 2px ##b5b5b5;
   margin-top: 3px;
 }
 
 body {
-  color: #3A3335;
+  color: ##3a3335;
   font-family: VT323;
   font-weight: bold;
 }
@@ -18,9 +18,9 @@ body {
 .pomodoro {
   height: 70px;
   display: flex;
-  background: #FEDC3D;
+  background: ##7d3dfe;
   justify-content: center;
-  box-shadow: 1px 1px 1px #888888;
+  box-shadow: 1px 1px 1px #b5b5b5;
 }
 
 
@@ -33,11 +33,11 @@ body {
   font-family: VT323;
   font-weight: bold;
   text-align: center;
-  box-shadow: 3px 3px 2px #888888;
+  box-shadow: 3px 3px 2px #b5b5b5;
 }
 
 .pomodoro button:active {
-  background: #079fb0; 
+  background: ##079fb0; 
   box-shadow: 0 0 0 transparent;
 }
 
@@ -66,13 +66,13 @@ body {
   font-family: VT323;
   font-weight: bold;
   margin: 15px;
-  box-shadow: 3px 3px 2px #888888;
+  box-shadow: 3px 3px 2px #b5b5b5;
   width: 90px;
   font-size: 25px;
 }
 
 .start-pause button:active {
-   background: #079fb0; 
+   background: ##5307b0; 
   box-shadow: 0 0 0 transparent;
 }
 
@@ -86,11 +86,11 @@ body {
 
 .reset button {
   border: none;
-  background: #DC5754;
+  background: ##b354dc;
   font-size: 25px;
   font-family: VT323;
   font-weight: bold;
-  box-shadow: 3px 3px 2px #888888;
+  box-shadow: 3px 3px 2px #b5b5b5;
   margin-left: 115px;
   width: 90px;
 
@@ -123,8 +123,8 @@ body {
 
 .break-time button {
   border: none;
-  background: #DC5754;
-  box-shadow: 1px 1px 1px #888888;
+  background: ##dc5754;
+  box-shadow: 1px 1px 1px #b5b5b5;
 }
 
 .break-time button:active {
