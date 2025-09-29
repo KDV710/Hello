@@ -17,10 +17,10 @@
         .box{
             display: inline-block;
             display: inline-block;
-            padding: 10px;
+            padding: 8px;
             border-radius: 5px;
-            min-width: 40px;
-            height: 40px;
+            min-width: 30px;
+            height: 30px;
             border: 3px solid #be9eff;
             border-radius: 5px;
             box-shadow: 2px 2px 1px 0px #553d87;
@@ -28,7 +28,7 @@
       
         h2{
             display: inline-block;
-            margin-right: 10px;
+            margin-right: 5px;
             margin-block-start: 5px;
         }
         h3{
@@ -73,10 +73,10 @@
     hours = 23 - now.getHours();
     minutes = 59 - now.getMinutes();
     seconds = 59 - now.getSeconds();
-    left_days.innerHTML = days + "<br> <span class=\"small\"> days </span>"
-    left_hours.innerHTML = hours + "<br> <span class=\"small\"> hours</span>";
-    left_minutes.innerHTML = minutes + "<br> <span class=\"small\">mins</span>";
-    left_seconds.innerHTML = seconds + "<br> <span class=\"small\">secs</span>";
+    left_days.innerHTML = days + "<span class=\"small\"> d </span>"
+    left_hours.innerHTML = hours + " <span class=\"small\"> h</span>";
+    left_minutes.innerHTML = minutes + "<span class=\"small\">m</span>";
+    left_seconds.innerHTML = seconds + "<span class=\"small\">s</span>";
     }
 
 timer = setInterval (showRemaining, 1000) 
