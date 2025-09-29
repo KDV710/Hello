@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			.macondo-regular {
+  font-family: "Macondo", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #64589a;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #ece5f0;
+		}
+
+		.border {
+			border: 0px solid #9f90e7;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #9f90e7;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+		<a id="Map_Of_The_Soul" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-heart"></i> Map_Of_The_Soul</a>		
+		<a id="Study_hub" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-bookmark"></i> Study_hub</a>		
+		<a id="Дата_вскрытия" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-box"></i> Дата_вскрытия</a>		
+		<a id="Archive" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-file-zipper"></i> Archive</a>		
+		<a id="2025" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-image"></i> 2025</a>
+
+		<a id="인생" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-dove"></i> 인생</a>
+
+		<a id="To-Do" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-circle-check"></i> To-Do</a>
+
+		<a id="Simple_Budget" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-sack-dollar"></i>Simple_Budget</a>
+
+
+	</nav>
+
+
+	<script>
+
+		let direction = "vertical";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'Map_Of_The_Soul')
+				window.open("https://www.notion.so/Map-Of-The-Soul-be8d3c0e717648d78b76123c96732b81", '_blank').focus();
+			else if (id == "Study_hub")
+				window.open("https://www.notion.so/Study-hub-53f551727fad43c9982478149d943e61", '_blank').focus();
+			else if (id == "Дата_вскрытия")
+				window.open("https://www.notion.so/278f5587b75780b387d1d163f36e5264", '_blank').focus();				else if (id == "Archive")
+				window.open("https://www.notion.so/Archive-00477a751dbd437bb9c2f8100804ad07", '_blank').focus();
+			else if (id == "2025")
+				window.open("https://www.notion.so/14df5587b75781fb99aeebb6d659433c?v=14df5587b75781a5bf35000c7116af6e", '_blank').focus();
+			else if (id == "ВИТА_OS")
+				window.open("https://www.notion.so/OS-153f5587b75780d286d6fadeb1fa2d55", '_blank').focus();
+			else if (id == "인생")
+				window.open("https://www.notion.so/442fb485bfa9477c97dd5f1928569957", '_blank').focus();
+			else if (id == "To-Do")
+				window.open("https://www.notion.so/122f5587b757817db56bf7343e09c010?v=147f5587b75780bca2c6000c2c4d516f", '_blank').focus();
+			else if (id == "Simple_Budget")
+				window.open("https://www.notion.so/Simple-Budget-122f5587b75781af963cdf8409135a05", '_blank').focus();
+		}
+	</script>
+
+
+</body>
+
+</html>
