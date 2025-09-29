@@ -18,7 +18,7 @@ body {
 .pomodoro {
   height: 70px;
   display: flex;
-  background: #FEDC3D;
+  background: #fedc3d;
   justify-content: center;
   box-shadow: 1px 1px 1px #888888;
 }
@@ -28,7 +28,7 @@ body {
   padding: 5px 10px 5px 10px;
   margin-top: 100%;
   border: none;
-  background: #01ABAA;
+  background: #6d01ab;
   font-size: 15px;
   font-family: VT323;
   font-weight: bold;
@@ -62,7 +62,7 @@ body {
 
 .start-pause button {
   border: none;
-  background: #01ABAA;
+  background: #4e01ab;
   font-family: VT323;
   font-weight: bold;
   margin: 15px;
@@ -86,7 +86,7 @@ body {
 
 .reset button {
   border: none;
-  background: #DC5754;
+  background: #ba54dc;
   font-size: 25px;
   font-family: VT323;
   font-weight: bold;
@@ -123,7 +123,7 @@ body {
 
 .break-time button {
   border: none;
-  background: #DC5754;
+  background: #b354dc;
   box-shadow: 1px 1px 1px #888888;
 }
 
