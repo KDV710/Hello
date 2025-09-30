@@ -1,0 +1,68 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greetings</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+
+    <style>
+.dongle-regular {
+  font-family: "Dongle", sans-serif;
+  font-weight: 400;
+  font-style: normal;            
+padding: 5px 5px ;
+            color: #cdc1ff;
+            text-align: center;
+                max-width: 95%;
+            margin: auto;
+            border: 3px solid #48327b;
+            border-radius: 5px;
+            box-shadow: 2px 2px 1px 0px #27174c;
+            font-variant-caps: petite-caps;
+            font-size: 2em;
+}
+
+
+    
+    </style>
+</head>
+<body>
+
+    <div class="dongle-regular " id="widget"></div>
+
+
+<script>
+
+quotes=[
+"1. 3D; <br> 2. 일;<br> 3. 여행;<br> 4. 다른 장소에 /나라에 살다;<br> 5. 영어로하고 한국어로 말하다;<br> 6. 콘서트 방탕  (한국);<br> 7. 건강.",
+];
+
+const INTERVAL = 86400000;
+
+function dispalyQuote(){
+
+    document.getElementById('widget').innerHTML =quotes[0];
+    quotes.forEach((quote, i) => {
+        setTimeout(() => {
+            document.getElementById('widget').innerHTML =quote;
+        }, i * INTERVAL);  
+    });
+    }
+
+    function dispalyWidget() {
+        dispalyQuote();
+        setTimeout(dispalyWidget, quotes.length*INTERVAL);
+    }
+    dispalyWidget()
+
+</script>
+
+</body>
+</html>
