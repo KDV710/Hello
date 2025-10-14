@@ -87,11 +87,12 @@ button {
 }
 
 #toImperial, #toMetric, #toCelsius, #toFahrenheit, #toKelvin, #mileToKm, #kmToMile, #hours, #days {
-	background-color:#000000;
+	background-color:#ededed;
+color:black;
 	font-size: 15px;
     width: 150px;   
     border-radius: 5px;
-    box-shadow: 2px 2px 1px 0px #000000;
+    box-shadow: 2px 2px 1px 0px #bababa;
 }
 
 #toImperial:hover, #toMetric:hover, #toCelsius:hover, #toFahrenheit:hover, #toKelvin:hover, #mileToKm:hover, #kmToMile:hover, #hours:hover, #days:hover{
@@ -149,20 +150,20 @@ input {
 
 	  <div class="content">
         <div class="categoryButtons">
-            <button id="mass" title="Mass"><i class="fas fa-balance-scale fa-2x"></i></button>
-            <button id="volume" title="Volume"><i class="fas fa-glass-whiskey fa-2x"></i></button>
-            <button id="temperature" title="Temperature"><i class="fa fa-thermometer-2 fa-2x"></i></button>
+            <button id="Масса" title="Масса"><i class="fas fa-balance-scale fa-2x"></i></button>
+            <button id="Объём" title="Объём"><i class="fas fa-glass-whiskey fa-2x"></i></button>
+            <button id="Температура" title="Температура"><i class="fa fa-thermometer-2 fa-2x"></i></button>
       
             </div>
-	<input type="number" style="display: none" placeholder="Enter a number" >
+	<input type="number" style="display: none" placeholder="Введите число" >
 
 	 <div class="metricImperial">
-	   <button id="toMetric" style="display:none">Imperial to metric</button>
-	   <button id="toImperial" style="display:none">Metric to imperial</button>
+	   <button id="toMetric" style="display:none">В метрическую систему</button>
+	   <button id="toImperial" style="display:none">В имперскую систему</button>
 	 </div>
 	 <div class="temp-unit-buttons">
-	   <button id="toCelsius" style="display:none">Celsius</button>
-	   <button id="toFahrenheit" style="display:none">Fahrenheit</button>
+	   <button id="toCelsius" style="display:none">°C</button>
+	   <button id="toFahrenheit" style="display:none">℉</button>
 	   <!-- <button id="toKelvin" style="display:none">Kelvin</button> -->
 	 </div>
 	 <div class="speed-units">
@@ -206,7 +207,7 @@ const resetButton = document.getElementById('reset');
 
 
 
-const massButton = document.getElementById('mass').addEventListener('click', (e) => {
+const massButton = document.getElementById('Масса').addEventListener('click', (e) => {
 	input.style.display = 'block';
 	toFahrenheit.style.display = 'none';
 	toCelsius.style.display = 'none';
@@ -219,17 +220,17 @@ const massButton = document.getElementById('mass').addEventListener('click', (e)
 	toImperial.style.display='block';
 	resetButton.style.display = 'block';
 	toMetric.addEventListener('click', (e) => {
-		output.innerHTML = `${input.value} ounce &rarr; ${massUnits.imperial.ounce()} gram <br>
-		${input.value} pound &rarr; ${massUnits.imperial.pound()} kg <br>
-		${input.value} stone &rarr; ${massUnits.imperial.stone()} kg <br>
-		${input.value} ton &rarr; ${massUnits.imperial.imperialTon()} tonne
+		output.innerHTML = `${input.value} унция &rarr; ${massUnits.imperial.ounce()} гр <br>
+		${input.value} фунт &rarr; ${massUnits.imperial.pound()} кг <br>
+		${input.value} стон  &rarr; ${massUnits.imperial.stone()} кг <br>
+		${input.value} тонн &rarr; ${massUnits.imperial.imperialTon()} т
 		`;
 	});
 	toImperial.addEventListener('click', (e) => {
-		output.innerHTML = `${input.value} gram &rarr; ${massUnits.metric.gram()} ounce <br>
-		${input.value} kg &rarr; ${massUnits.metric.kglb()} pound <br>
-		${input.value} kg &rarr; ${massUnits.metric.kgst()} stone <br>
-		${input.value} tonne &rarr; ${massUnits.metric.metricTonne()} ton 
+		output.innerHTML = `${input.value} гр &rarr; ${massUnits.metric.gram()} унция <br>
+		${input.value} кг &rarr; ${massUnits.metric.kglb()} фунт <br>
+		${input.value} кг &rarr; ${massUnits.metric.kgst()} стон <br>
+		${input.value} тонн &rarr; ${massUnits.metric.metricTonne()} тонн 
 		`;
 	});
 	output.style.display = 'block';
@@ -237,7 +238,7 @@ const massButton = document.getElementById('mass').addEventListener('click', (e)
 	input.value = null;
 });
 
-const volumeButton = document.getElementById('volume').addEventListener('click', (e) => {
+const volumeButton = document.getElementById('Объём').addEventListener('click', (e) => {
 	input.style.display = 'block';
 	toFahrenheit.style.display = 'none';
 	toCelsius.style.display = 'none';
@@ -250,17 +251,17 @@ const volumeButton = document.getElementById('volume').addEventListener('click',
 	toImperial.style.display='block';
 	resetButton.style.display = 'block';
 	toMetric.addEventListener('click', (e) => {
-		output.innerHTML = `${input.value} fl. ounce &rarr; ${volumeUnits.imperial.fluidOunce()} ml <br>
-		${input.value} pint &rarr; ${volumeUnits.imperial.pint()} litre <br>
-		${input.value} quart &rarr; ${volumeUnits.imperial.quart()} litre <br>
-		${input.value} gallon &rarr; ${volumeUnits.imperial.gallon()} litre
+		output.innerHTML = `${input.value} унция &rarr; ${volumeUnits.imperial.fluidOunce()} мл <br>
+		${input.value} пинта &rarr; ${volumeUnits.imperial.pint()} л <br>
+		${input.value} кварта &rarr; ${volumeUnits.imperial.quart()} л <br>
+		${input.value} галлон &rarr; ${volumeUnits.imperial.gallon()} л
 		`;
 	});
 	toImperial.addEventListener('click', (e) =>{
-		output.innerHTML = `${input.value} ml &rarr; ${volumeUnits.metric.ml()} fluid ounce <br>
-		${input.value} litre &rarr; ${volumeUnits.metric.lToPt()} pint <br>
-		${input.value} litre &rarr; ${volumeUnits.metric.lToQt()} quart <br>
-		${input.value} litre &rarr; ${volumeUnits.metric.lToGallon()} gallon
+		output.innerHTML = `${input.value} мл &rarr; ${volumeUnits.metric.ml()} унция <br>
+		${input.value} л &rarr; ${volumeUnits.metric.lToPt()} пинта <br>
+		${input.value} л &rarr; ${volumeUnits.metric.lToQt()} кварта <br>
+		${input.value} л &rarr; ${volumeUnits.metric.lToGallon()} галлон
 		`;
 	});
 	output.style.display = 'block';
@@ -268,7 +269,7 @@ const volumeButton = document.getElementById('volume').addEventListener('click',
 	input.value = null;
 });
 
-const temperatureButton = document.getElementById('temperature').addEventListener('click', (e) => {
+const temperatureButton = document.getElementById('Температура').addEventListener('click', (e) => {
 	toMetric.style.display = 'none';
 	toImperial.style.display = 'none';
 	hours.style.display = 'none';
