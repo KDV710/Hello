@@ -1,4 +1,5 @@
 body {
+  background: #f6f2f4;
   display: flex;
   justify-content: center;
   padding-top: 10px;
@@ -6,8 +7,8 @@ body {
 }
 
 .calendar {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   /* use image as background */
   background-image: url("https://i.pinimg.com/1200x/40/f5/e3/40f5e3cbdc796fab9940b13b6cc8ae66.jpg");
   background-size: cover;
