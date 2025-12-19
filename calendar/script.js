@@ -21,7 +21,7 @@ function renderCalendar() {
 
   yearEl.textContent = year;
 
-  monthEl.textContent = currentDate.toLocaleDateString("rus-RUS", {
+  monthEl.textContent = currentDate.toLocaleDateString("en-US", {
     month: "long",
   });
 
