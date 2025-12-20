@@ -18,12 +18,13 @@ body {
 	margin: 20px auto 20px;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	background-color: var(--main-bg-color);
 	position: relative;
 	transition: all ease 0.2s;
 	overflow: hidden;
+	top: 7px;
 }
 
 img {
