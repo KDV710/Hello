@@ -24,7 +24,7 @@ body {
 	position: relative;
 	transition: all ease 0.2s;
 	overflow: hidden;
-	top: 7px;
+	top: 0px;
 }
 
 img {
