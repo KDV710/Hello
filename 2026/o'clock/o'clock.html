@@ -1,3 +1,10 @@
+<!--
+ * @Author: Tina Huang
+ * @Date: 2022-12-24 17:52:21
+ * @LastEditors: Tina Huang
+ * @LastEditTime: 2022-12-24 19:08:08
+ * @Description: 
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +22,7 @@
       font-family: "Share Tech Mono";
       font-style: normal;
       font-weight: 400;
-      src: url(../fonts/J7aHnp1uDWRBEqV98dVQztYldFcLowEFA87Heg.woff2) format("woff2");
+      src: url(J7aHnp1uDWRBEqV98dVQztYldFcLowEFA87Heg.woff2) format("woff2");
       unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
         U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
         U+2212, U+2215, U+FEFF, U+FFFD;
@@ -28,8 +35,8 @@
 
     body {
       background-color: #191919;
-      /* background: #0f3854;
-        background: radial-gradient(ellipse at center, #0a2e38 0%, #000000 70%); */
+      /* background: #0f5439;
+        background: radial-gradient(ellipse at center, #0f5439 0%, #000000 70%); */
       background-size: 100%;
     }
 
@@ -46,7 +53,7 @@
       top: 50%;
       transform: translate(-50%, -50%);
       color: #daf6ff;
-      text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
+      text-shadow: 0 0 20px #0ae667, 0 0 20px rgba(10, 175, 230, 0);
     }
 
     #clock .time {
@@ -68,12 +75,12 @@
 
     html[theme="dark"] body {
       background: #191919;
-      /* background: radial-gradient(ellipse at center, #0a2e38 0%, #000000 70%); */
+      /* background: radial-gradient(ellipse at center, #0f5439 0%, #000000 70%); */
     }
 
     html[theme="dark"] #clock {
       color: #daf6ff;
-      text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
+      text-shadow: 0 0 20px #0ae667, 0 0 20px rgba(10, 175, 230, 0);
     }
   </style>
 </head>
@@ -91,13 +98,13 @@
         time: "",
         date: "",
         week: [
-          "星期日",
-          "星期一",
-          "星期二",
-          "星期三",
-          "星期四",
-          "星期五",
-          "星期六",
+          "Воскресенье",
+          "Понедельник",
+          "Вторник",
+          "Среда",
+          "Четверг",
+          "Пятница",
+          "Суббота",
         ],
         en_week: [
           "Sunday",
@@ -108,11 +115,11 @@
           "Friday",
           "Saturday",
         ],
-        lan: 'cn'
+        lan: 'rus'
       },
       mounted() {
         const params = getAllParams(CryptoJS);
-        this.lan = params.lan || 'cn';
+        this.lan = params.lan || 'rus';
         this.updateTime();
         setInterval(this.updateTime, 1000);
       },
