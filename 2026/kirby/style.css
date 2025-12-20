@@ -15,7 +15,7 @@
 }
 
 body {
-	margin: 40px auto 20px;
+	margin: 20px auto 20px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -52,21 +52,6 @@ img {
 
 .container:active {
 	transform: scale(0.95);
-}
-
-#logo {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-decoration: none;
-	font-size: 40px;
-	position: absolute;
-	margin-top: 358px;
-}
-
-#logo:hover {
-	opacity: 0.3;
-	transform: scale(1.1);
 }
 
 @media screen and (max-width:750px) {
