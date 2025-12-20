@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 
 <head>
   <meta charset="UTF-8" />
@@ -88,12 +88,12 @@
   <div class="container" id="container">
     <div class="inner">
       <div class="event-box">
-        <h3 id="name"> D-day </h3>
+        <h3 id="name">D-day</h3>
         <span id="date">2026-10-07</span>
       </div>
       <div class="space">
         <div class="days-box">
-          <h1 id="days">230</h1>
+          <h1 id="days">291</h1>
           <span id="days_label">Days left</span>
         </div>
         <img src="countdown-card2.png" alt="" class="deco">
@@ -106,9 +106,9 @@
       handleDarkMode(params);
       console.log(params)
       let _now = new Date();
-      let name = getQueryString("name") || params.name || "D-day";
+      let name = getQueryString("name") || params.name || "今年";
       let day =
-        getQueryString("day") || params.day || `${_now.getFullYear()}/10/06`;
+        getQueryString("day") || params.day || `${_now.getFullYear()}/12/31`;
       let target_date = new Date(`${day} 23:59`);
       let passed = target_date.getTime() - _now.getTime();
       let seconds = (passed / 1000) % 60,
