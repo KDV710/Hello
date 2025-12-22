@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Days card</title>
+  <script src="../lib/global.js?v=20240313"></script>
+  <script src="../lib/crypto-js.min.js"></script>
+  <style>
+    html,
+    body,
+    h1,
+    h3 {
+      margin: 0;
+      padding: 0;
+    }
+
+    @font-face {
+      font-family: "Klee-One";
+      src: url("../fonts/Klee_One/KleeOne-Regular.ttf");
+    }
+
+    @font-face {
+      font-family: "Rampart-One";
+      src: url("../fonts/Rampart_One/RampartOne-Regular.ttf");
+    }
+
+    .container {
+      font-family: "Rampart-One";
+      width: 80vw;
+      height: 80vw;
+      background-image: url("countdown-card.jpeg");
+      margin: 0 auto;
+      border-radius: 20px;
+      box-sizing: border-box;
+      padding: 0vw;
+      background-size: 100% 100%;
+      color: #60a257;
+      font-size: 5vw;
+    }
+
+    .inner {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .space {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .deco {
+      display: block;
+      width: 60%;
+    }
+
+    .days-box {
+      font-weight: 500;
+    }
+
+    h1 {
+      font-size: 10vw;
+      text-align: left;
+
+    }
+
+    .event-box {
+      text-align: center;
+      font-weight: bold;
+      font-size: 7vw;
+    }
+
+    h3 {
+
+      line-height: 1;
+    }
+
+    html[theme="dark"],
+    html[theme="dark"] body {
+      background-color: #191919;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" id="container">
+    <div class="inner">
+      <div class="event-box">
+        <h3 id="name">D-day</h3>
+        <span id="date">26-10-07</span>
+      </div>
+    <div class="time-unit">
+        <div class="total-days" id="total-days">0</div>
+        <div class="ays-label">Days</div>
+        
+        <div class="breakdown">
+            <div class="time-unit">
+    </div>
+  </div>
+
+  <script>
+   // Constants for time conversion
+    const MS_PER_DAY = 1000 * 60 * 60 * 24;
+
+    /**
+     * Calculates the time elapsed since a given date and updates the UI.
+     */
+    function calculateTimeElapsed() {
+        const startDate = new Date('2026-10-07T00:00:00');
+        const now = new Date();
+        
+        // Calculate the difference in milliseconds and then convert to total days
+        const timeDifferenceMs = startDate.getTime() - now.getTime();
+        const totalDays = Math.floor(timeDifferenceMs / MS_PER_DAY);
+
+        // --- Precise Breakdown of Years, Months, and Days ---
+        let years = startDate.getFullYear() - now.getFullYear();
+        let months = startDate.getMonth() - now.getMonth();
+        let days = startDate.getDate() - now.getDate();
+        
+        if (days < 0) {
+            months--;
+            // Get the number of days in the previous month
+            const prevMonthDate = new Date(now.getFullYear(), now.getMonth(), 0);
+            days += prevMonthDate.getDate();
+        }
+        
+        if (months < 0) {
+            years--;
+            months += 12;
+        }
+
+        // --- Approximate breakdown for Weeks ---
+        const weeks = Math.floor(totalDays / 7);
+
+        // Update the HTML elements with the calculated values
+
+        document.getElementById('total-days').innerText = totalDays;
+        
+        // Update the last updated timestamp
+        document.getElementById('lastUpdated').innerText = `Last updated: ${now.toLocaleString()}`;
+    }
+
+    // Call the function initially to display the values
+    calculateTimeElapsed();
+
+    // Set an interval to update the values every minute
+    setInterval(calculateTimeElapsed, 60000);
+</script>
+</body>
+
+</html>
