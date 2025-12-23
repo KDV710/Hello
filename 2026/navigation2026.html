@@ -15,6 +15,7 @@
   /* flex-direction: column; */
   align-items: center;
   font-family: "Roboto Mono", monospace;
+
 }
 
 button {
@@ -38,6 +39,7 @@ button {
   cursor: pointer;
   position: relative;
   background-color: rgba(0, 0, 0, 0);
+
 }
 
 .fill::after {
@@ -46,14 +48,16 @@ button {
   z-index: -1;
   position: absolute;
   height: 100%;
-  top: 5px;
-  left: 5px;
+  top: 7px;
+  left: 7px;
   transition: 0.2s;
+
 }
 
 .fill:hover::after {
   top: 0px;
   left: 0px;
+
 }
 
 .green1::after{
@@ -99,6 +103,10 @@ button {
 .green11::after{
   background-color: #ebfea8;
 }
+
+.green12::after{
+  background-color: #f4ffcc;
+}
 </style>
 
 </head>
@@ -106,25 +114,27 @@ button {
 	<nav class="navMenu  border">
   <button id="Life" onclick="navigate(this.id)" id="inbox" type="button" class="fill green1"><i class="fa-solid fa-dove" style="transform: rotate(-0deg);"></i> Life</button>
 <br>
-  <button id="To-Do" onclick="navigate(this.id)" id="inbox" type="button" class="fill green2"><i class="fa-solid fa-circle-check" style="transform: rotate(-0deg);"></i> To-Do</button>
+  <button id="2026→2027" onclick="navigate(this.id)" id="inbox" type="button" class="fill green2"><i class="fa-solid fa-tree" style="transform: rotate(-0deg);"></i> 2026→2027</button>
+<br>  
+<button id="To-Do" onclick="navigate(this.id)" id="inbox" type="button" class="fill green3"><i class="fa-solid fa-circle-check" style="transform: rotate(-0deg);"></i> To-Do</button>
 <br>
-  <button id="Tracker" onclick="navigate(this.id)" id="inbox" type="button" class="fill green3"><i class="fa-solid fa-list-check" style="transform: rotate(-0deg);"></i> Tracker</button>
+  <button id="Tracker" onclick="navigate(this.id)" id="inbox" type="button" class="fill green4"><i class="fa-solid fa-list-check" style="transform: rotate(-0deg);"></i> Tracker</button>
 <br>
-  <button id="Study_hub" onclick="navigate(this.id)" id="inbox" type="button" class="fill green4"><i class="fa-solid fa-book-bookmark" style="transform: rotate(-0deg);"></i> Study_hub</button>
+  <button id="Study_hub" onclick="navigate(this.id)" id="inbox" type="button" class="fill green5"><i class="fa-solid fa-book-bookmark" style="transform: rotate(-0deg);"></i> Study_hub</button>
 <br>
-  <button id="Budget" onclick="navigate(this.id)" id="inbox" type="button" class="fill green5"><i class="fa-solid fa-sack-dollar" style="transform: rotate(-0deg);"></i> Budget</button>
+  <button id="Budget" onclick="navigate(this.id)" id="inbox" type="button" class="fill green6"><i class="fa-solid fa-sack-dollar" style="transform: rotate(-0deg);"></i> Budget</button>
 <br>
-  <button id="Dream_book" onclick="navigate(this.id)" id="inbox" type="button" class="fill green6"><i class="fa-solid fa-moon" style="transform: rotate(-0deg);"></i> Dream_book</button>
+  <button id="Dream_book" onclick="navigate(this.id)" id="inbox" type="button" class="fill green7"><i class="fa-solid fa-moon" style="transform: rotate(-0deg);"></i> Dream_book</button>
 <br>
-  <button id="Note" onclick="navigate(this.id)" id="inbox" type="button" class="fill green7"><i class="fa-solid fa-comment" style="transform: rotate(-0deg);"></i> Note</button>
+  <button id="Note" onclick="navigate(this.id)" id="inbox" type="button" class="fill green8"><i class="fa-solid fa-comment" style="transform: rotate(-0deg);"></i> Note</button>
 <br>
-  <button id="Travel" onclick="navigate(this.id)" id="inbox" type="button" class="fill green8"><i class="fa-solid fa-location-dot" style="transform: rotate(-0deg);"></i> Travel</button>
+  <button id="Travel" onclick="navigate(this.id)" id="inbox" type="button" class="fill green9"><i class="fa-solid fa-location-dot" style="transform: rotate(-0deg);"></i> Travel</button>
 <br>
-  <button id="Recipes" onclick="navigate(this.id)" id="inbox" type="button" class="fill green9"><i class="fa-solid fa-utensils" style="transform: rotate(-0deg);"></i> Recipes</button>
+  <button id="Recipes" onclick="navigate(this.id)" id="inbox" type="button" class="fill green10"><i class="fa-solid fa-utensils" style="transform: rotate(-0deg);"></i> Recipes</button>
 <br>
-  <button id="Vita_OS" onclick="navigate(this.id)" id="inbox" type="button" class="fill green10"><i class="fa-solid fa-box" style="transform: rotate(-0deg);"></i> Vita_OS</button>
+  <button id="Vita_OS" onclick="navigate(this.id)" id="inbox" type="button" class="fill green11"><i class="fa-solid fa-box" style="transform: rotate(-0deg);"></i> Vita_OS</button>
 <br>
-  <button id="Archive" onclick="navigate(this.id)" id="inbox" type="button" class="fill green11"><i class="fa-solid fa-file-zipper" style="transform: rotate(-0deg);"></i> Archive</button>
+  <button id="Archive" onclick="navigate(this.id)" id="inbox" type="button" class="fill green12"><i class="fa-solid fa-file-zipper" style="transform: rotate(-0deg);"></i> Archive</button>
 
 	</nav>
 
@@ -144,29 +154,32 @@ button {
 
 			else if (id == "Vita_OS")
 				window.open("https://www.notion.so/OS-153f5587b75780d286d6fadeb1fa2d55", '_blank').focus();
-
+				
 			else if (id == "Life")
 				window.open("https://www.notion.so/442fb485bfa9477c97dd5f1928569957", '_blank').focus();
-
+				
 			else if (id == "To-Do")
 				window.open("https://www.notion.so/To-Do-2026-2cbf5587b7578025a194c662d23176ea", '_blank').focus();
-
+				
 			else if (id == "Tracker")
 				window.open("https://www.notion.so/2b5f5587b75781a6aeddf41fd9038960", '_blank').focus();
-
+				
 			else if (id == "Budget")
 				window.open("https://www.notion.so/Simple-Budget-2026-2ccf5587b75780708f4dfe66b53980f1", '_blank').focus();
-
+				
 			else if (id == "Dream_book")
 				window.open("https://www.notion.so/large-color-5b70a2-rm-16bf5587b757807abe46c96195d7ae5d", '_blank').focus();
 
+			else if (id == "2026→2027")
+				window.open("https://www.notion.so/large-color-88c9f8-rm-2026-2027-2d2f5587b757804faee1f41150c9332c", '_blank').focus();
+
 			else if (id == "Note")
 				window.open("https://www.notion.so/large-color-227b3f-rm-16bf5587b75780c1a4d7de3a72f78da9", '_blank').focus();
-
+			
 			else if (id == "Travel")
 				window.open("https://www.notion.so/282f5587b757802ba033ed7e9f5ff6c3", '_blank').focus();
-
-						else if (id == "Recipes")
+				
+			else if (id == "Recipes")
 				window.open("https://www.notion.so/28af5587b75780ff87e3f1634986ab0c", '_blank').focus();
 		}
 	</script>
