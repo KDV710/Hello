@@ -1,0 +1,186 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet" />
+
+<style>
+  body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+
+  /* flex-direction: column; */
+  align-items: center;
+  font-family: "Roboto Mono", monospace;
+
+}
+
+button {
+  display: inline-block;
+  margin: 4px;
+  font-family: inherit;
+  min-width: 200px;
+}
+/* End of Page styling */
+
+
+
+/* Fill button styling */
+.fill {
+  font-size: 14px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 15px 25px 15px;
+  outline: 0;
+  border: 2px solid green;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+
+}
+
+.fill::after {
+  content: "";
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+
+}
+
+.fill:hover::after {
+  top: 0px;
+  left: 0px;
+
+}
+
+.green1::after{
+  background-color: #325f04;
+}
+
+.green2::after{
+  background-color: #457505;
+}
+
+.green3::after{
+  background-color: #588614;
+}
+
+.green4::after{
+  background-color: #699929;
+}
+
+.green5::after{
+  background-color: #7cab3e;
+}
+
+.green6::after{
+  background-color: #90bd50;
+}
+
+.green7::after{
+  background-color: #a1ce62;
+}
+
+.green8::after{
+  background-color: #b2e274;
+}
+
+.green9::after{
+  background-color: #c7f487;
+}
+
+.green10::after{
+  background-color: #daff9a;
+}
+
+.green11::after{
+  background-color: #ebfea8;
+}
+
+.green12::after{
+  background-color: #f4ffcc;
+}
+</style>
+
+</head>
+<body>
+	<nav class="navMenu  border">
+
+  <button id="2026→2027" onclick="navigate(this.id)" id="inbox" type="button" class="fill green2"><i class="fa-solid fa-tree" style="transform: rotate(-0deg);"></i> 2026→2027</button>
+<br>  
+  <button id="Tracker" onclick="navigate(this.id)" id="inbox" type="button" class="fill green4"><i class="fa-solid fa-list-check" style="transform: rotate(-0deg);"></i> Tracker</button>
+<br>
+  <button id="Study_hub" onclick="navigate(this.id)" id="inbox" type="button" class="fill green5"><i class="fa-solid fa-book-bookmark" style="transform: rotate(-0deg);"></i> Study_hub</button>
+<br>
+  <button id="Budget" onclick="navigate(this.id)" id="inbox" type="button" class="fill green6"><i class="fa-solid fa-sack-dollar" style="transform: rotate(-0deg);"></i> Budget</button>
+<br>
+  <button id="Dream_book" onclick="navigate(this.id)" id="inbox" type="button" class="fill green7"><i class="fa-solid fa-moon" style="transform: rotate(-0deg);"></i> Dream_book</button>
+<br>
+  <button id="Note" onclick="navigate(this.id)" id="inbox" type="button" class="fill green8"><i class="fa-solid fa-comment" style="transform: rotate(-0deg);"></i> Note</button>
+<br>
+  <button id="Travel" onclick="navigate(this.id)" id="inbox" type="button" class="fill green9"><i class="fa-solid fa-location-dot" style="transform: rotate(-0deg);"></i> Travel</button>
+<br>
+  <button id="Recipes" onclick="navigate(this.id)" id="inbox" type="button" class="fill green10"><i class="fa-solid fa-utensils" style="transform: rotate(-0deg);"></i> Recipes</button>
+<br>
+  <button id="Vita_OS" onclick="navigate(this.id)" id="inbox" type="button" class="fill green11"><i class="fa-solid fa-box" style="transform: rotate(-0deg);"></i> Vita_OS</button>
+<br>
+  <button id="Archive" onclick="navigate(this.id)" id="inbox" type="button" class="fill green12"><i class="fa-solid fa-file-zipper" style="transform: rotate(-0deg);"></i> Archive</button>
+
+	</nav>
+
+  <script>
+		let direction = "vertical";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+		function navigate(id) {
+
+			if (id == 'Study_hub')
+				window.open("https://www.notion.so/Study-hub-53f551727fad43c9982478149d943e61", '_blank').focus();
+	
+			else if (id == "Archive")
+				window.open("https://www.notion.so/Archive-00477a751dbd437bb9c2f8100804ad07", '_blank').focus();
+
+			else if (id == "Vita_OS")
+				window.open("https://www.notion.so/OS-2b4f5587b75781cabbf8cfac7ae2cb47", '_blank').focus();
+				
+			else if (id == "Life")
+				window.open("https://www.notion.so/442fb485bfa9477c97dd5f1928569957", '_blank').focus();
+				
+			else if (id == "To-Do")
+				window.open("https://www.notion.so/To-Do-2026-2cbf5587b7578025a194c662d23176ea", '_blank').focus();
+				
+			else if (id == "Tracker")
+				window.open("https://www.notion.so/2b5f5587b75781a6aeddf41fd9038960", '_blank').focus();
+				
+			else if (id == "Budget")
+				window.open("https://www.notion.so/Simple-Budget-2026-2ccf5587b75780708f4dfe66b53980f1", '_blank').focus();
+				
+			else if (id == "Dream_book")
+				window.open("https://www.notion.so/large-color-5b70a2-rm-16bf5587b757807abe46c96195d7ae5d", '_blank').focus();
+
+			else if (id == "2026→2027")
+				window.open("https://www.notion.so/2026-2d2f5587b7578133b848f61f14056239", '_blank').focus();
+
+			else if (id == "Note")
+				window.open("https://www.notion.so/large-color-227b3f-rm-16bf5587b75780c1a4d7de3a72f78da9", '_blank').focus();
+			
+			else if (id == "Travel")
+				window.open("https://www.notion.so/282f5587b757802ba033ed7e9f5ff6c3", '_blank').focus();
+				
+			else if (id == "Recipes")
+				window.open("https://www.notion.so/28af5587b75780ff87e3f1634986ab0c", '_blank').focus();
+		}
+	</script>
+
+</body>
+</html>
